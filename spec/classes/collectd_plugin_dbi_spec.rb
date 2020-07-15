@@ -66,6 +66,7 @@ describe 'collectd::plugin::dbi', type: :class do
           is_expected.to contain_concat__fragment('collectd_plugin_dbi_conf_query_log_delay').with(content: %r{<Result>\n})
           is_expected.to contain_concat__fragment('collectd_plugin_dbi_conf_query_log_delay').with(content: %r{InstancesFrom \"inet_server_port\" \"inet_server_host\"\n})
           is_expected.to contain_concat__fragment('collectd_plugin_dbi_conf_query_log_delay').with(content: %r{ValuesFrom \"log_delay\"\n})
+          is_expected.to contain_concat__fragment('collectd_plugin_dbi_conf_query_log_delay').with(content: %r{<Query \"log_delay\">\n})
         end
       end
 
